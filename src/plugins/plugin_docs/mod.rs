@@ -85,7 +85,6 @@ impl PluginDocs {
             .replace("</ElemMDContent>", content)
     }
 
-    // ================= Sidebar =================
 
     // ================= Sidebar =================
 
