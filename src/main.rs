@@ -67,8 +67,8 @@ fn handle_client(mut stream: TcpStream, plugin_manager: &PluginManager) {
 
 
 fn main() -> std::io::Result<()> {
-    let listener = TcpListener::bind("127.0.0.1:25333")?;
-    println!("Server listening on http://127.0.0.1:25333");
+    let listener = TcpListener::bind("127.0.0.1:8000")?;
+    println!("Server listening on http://127.0.0.1:8000");
 
     // ---- Plugin system bootstrap ----
     let mut plugin_manager = PluginManager::new();
