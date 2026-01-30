@@ -57,13 +57,21 @@
                         a strong visual identity that stays consistent from every angle.
                     </p>
                 </div>
-                <div class="lay-space-01"></div>
+                <div class="lay-space-03"></div>
+
+                <!-- HERO IMAGE PREVIEW -->
                 <div class="lay-row lay-center">
-                    <iframe src="https://www.youtube.com/embed/P8LBNL9E03o?si=ZqORcEbxF_CPImQH"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div id="hero-container" class="hero-container">
+                        <div class="hero-ratio">
+                            <img src="/assets/video/ssh_showcase01_pre.webp" alt="Summon Style Hardline preview"
+                                class="hero-preview">
+
+                            <div class="hero-play"><img src="/assets/branding/SBS_Sym_Play.png" alt="Play" style="width: 40px; height: 40px;"></div>
+
+                        </div>
+                    </div>
                 </div>
+
 
             </div>
         </section>
@@ -189,7 +197,7 @@
                 </div>
                 <div class="lay-space-01"></div>
                 <div class="lay-row">
-                    <a href="/products/summon-style-hardline" class="ui-link">Asset Store</a>
+                    <a href="/products/summon-style-hardline" class="ui-link">Asset Store Page Under Construction...</a>
                 </div>
 
             </div>
@@ -244,6 +252,26 @@
                 showImage(index);
             });
         });
+
+
+
+        const hero = document.getElementById("hero-container");
+
+        hero.addEventListener("click", () => {
+            const ratio = hero.querySelector(".hero-ratio");
+
+            ratio.innerHTML = `
+        <video 
+            controls 
+            playsinline 
+            autoplay>
+            
+            <source src="/assets/video/ssh_showcase01.webm" type="video/webm">
+            <source src="/assets/video/ssh_showcase01.mp4" type="video/mp4">
+        </video>
+    `;
+        });
+
     </script>
 
 </body>

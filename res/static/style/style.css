@@ -258,6 +258,11 @@ section {
     height: var(--space-01);
 }
 
+.lay-space-03 {
+    width: var(--space-03);
+    height: var(--space-03);
+}
+
 /* typography */
 h1,
 h2,
@@ -484,6 +489,56 @@ a:hover::after {
     box-sizing: border-box;
 }
 
+.hero-container {
+    position: relative;
+    width: 100%;
+    max-width: 960px;   /* or whatever your layout uses */
+    cursor: pointer;
+}
+
+.hero-ratio {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;   /* critical */
+    background: #000;
+    overflow: hidden;
+}
+
+.hero-preview,
+.hero-ratio video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;   /* or cover */
+    border-radius: var(--radius-00);
+}
+
+.hero-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    pointer-events: none;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.hero-container:hover .hero-play {
+    transform: translate(-50%, -50%) scale(1.2);
+    background: rgba(0,0,0,0.8);
+}
+
+
 
 .link-home {
     cursor: pointer;
@@ -505,6 +560,7 @@ a:hover::after {
     height: 20px;
     margin: 5px;
 }
+
 
 .flip {
     scale: -1 1;

@@ -46,6 +46,8 @@ impl PluginStatic {
             "svg" => Some("image/svg+xml"),
             "webp" => Some("image/webp"),
             "ico" => Some("image/x-icon"),
+            "webm" => Some("video/webm"),
+            "mp4" => Some("video/mp4"),
             _ => None,
         }
     }
