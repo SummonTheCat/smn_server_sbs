@@ -13,7 +13,7 @@ Hardline's shaders are unlit, offering performant visuals, while still allowing 
 The `Summon Style Hardline` package provides a complete system for authoring, controlling, and rendering stylized, illustrative, cell-shaded, materials in Unity. We can break the project down into a few key modules:
 - **Core**: The core system files you need to run the system, this includes shaders, URP integration assets and the core runtime system and component.
 - **Assets**: Sample assets set up for the style system, including materials, meshes, and textures. This will also be where any official asset packs are placed on install.
-- **Documentation**: All the local documentation files for the system. Documentation is also available online [here](https://summonboxstudio.com/docs/summonstylehardline/README). 
+- **Documentation**: All the local documentation files for the system. Documentation is also available online [here](https://summonboxstudio.com/docs/smnstylehardline/README). 
 - **Demo**: A demo scene showcasing the system in action, includes demo only component scripts to help illustrate usage with an interactive day/night cycle.
 - **Wizard**: An editor wizard to help set up the system in your project, remove unused modules, and link to online documentation.
 
