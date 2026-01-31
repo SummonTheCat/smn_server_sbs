@@ -1,25 +1,52 @@
-# Requirements [Check Data]
+# Requirements
 
 This document defines the minimum technical requirements needed for Summon Style: Hardline to function correctly inside a Unity project.
 
 ---
 
-## Unity Version
+## Unity Versions
 
 Summon Style: Hardline requires a modern Unity editor with current Scriptable Render Pipeline support.
 
-**Supported LTS Versions:** 
+| Unity Version | Release Date | Support Status |
+|--------------|-------------|----------------|
+| 6000.3.6f1 (LTS) | 29 Jan 2026 | Supported |
+| 6000.3.5f2 (LTS) | 26 Jan 2026 | Supported |
+| 6000.3.5f1 (LTS) | 21 Jan 2026 | Supported |
+| 6000.3.4f1 (LTS) | 14 Jan 2026 | Supported |
+| 6000.3.3f1 (LTS) | 08 Jan 2026 | Supported |
+| 6000.3.2f1 (LTS) | 16 Dec 2025 | Supported |
+| 6000.3.1f1 (LTS) | 09 Dec 2025 | Supported |
+| 6000.3.0f1 (LTS) | 03 Dec 2025 | Supported|
+| 6000.2.15f1 | 03 Dec 2025 | Supported |
+| 6000.2.14f1 | 26 Nov 2025 | Supported |
+| 6000.2.13f1 | 19 Nov 2025 | Supported |
+| 6000.2.12f1 | 12 Nov 2025 | Supported |
+| 6000.2.11f1 | 05 Nov 2025 | Supported |
+| 6000.2.10f1 | 29 Oct 2025 | Supported |
+| 6000.2.9f1 | 22 Oct 2025 | Supported |
+| 6000.2.8f1 | 15 Oct 2025 | Core Supported (*) |
+| 6000.2.7f2 | 08 Oct 2025 | Core Supported (*) |
+| 6000.2.6f2 | 03 Oct 2025 | Core Supported (*) |
+| 6000.1.17f1 | 03 Oct 2025 | Core Supported (*) |
+| 6000.0.66f2 (LTS) | 26 Jan 2026 | Core Supported (*) |
+| 6000.0.66f1 (LTS) | 21 Jan 2026 | Untested |
+| 6000.0.65f1 (LTS) | 07 Jan 2026 | Core Supported (*) |
+| 6000.0.64f1 (LTS) | 10 Dec 2025 | Core Supported (*) |
+| 6000.0.63f1 (LTS) | 28 Nov 2025 | Untested |
+| 6000.0.62f1 (LTS) | 05 Nov 2025 | Untested |
+| 6000.0.61f1 (LTS) | 30 Oct 2025 | Core Supported (*) |
+| 6000.0.60f1 (LTS) | 16 Oct 2025 | Core Supported (*) |
+| 6000.0.59f2 (LTS) | 08 Oct 2025 | Untested |
+| 6000.0.58f2 (LTS) | 03 Oct 2025 | Core Supported (*) | 
 
-| Unity Version | Status |
-|---------------|--------|
-| 2022 LTS | Supported |
-| 2023.x | Supported |
-| 2021 LTS | Not supported |
-| Older | Not supported |
+> `"*"` Versions with this symbol in the status column have Demo UI icon visibility issues for UIToolKit. This does NOT effect the core style system or sample assets, only effects demo UI. 
 
-**All Tested Versions:**
-- Unity 2022.3.15f1
-- Unity 2023.2.18f1
+All `Supported` Unity 6 versions below **6000.2.6f2** are excluded due to known [security vulnerabilities](https://unity.com/security/sept-2025-01).
+
+All `LTS` Unity 6 versions below **6000.0.58f2** are excluded due to known [security vulnerabilities](https://unity.com/security/sept-2025-01).
+
+Due to above mentioned security vulnerabilities and drastic changed between the remaining version's URP Package before Unity 6, we recommend using this system with versions of Unity 6 that Unity has tagged `Supported`and versions above `6000.2.10f1` for a clean experience. That being said, with some tweaks the system can be used in any version above `6000.0.58f2` safely.
 
 ---
 
@@ -126,9 +153,9 @@ Hardline requires:
 
 Your project must meet all of the following before installation:
 
-- [ ] Unity 2022+  
+- [ ] Using Listed Unity version   
 - [ ] Universal Render Pipeline active  
-- [ ] URP 14+ installed  
+- [ ] Listed URP Version installed  
 - [ ] Linear color space enabled  
 - [ ] Depth Texture enabled  
 - [ ] Opaque Texture enabled  
