@@ -25,7 +25,7 @@ Lights only act as:
 - Shadow occlusion volumes  
 - Environment absorption zones  
 
-They can darken, soften, or break up the global lighting, but they do not emit brightness.
+They negate environmental influence and break up the global lighting, but they do not emit brightness.
 
 This keeps the visual style stable and predictable.
 
@@ -137,21 +137,16 @@ visual styles.
 
 ## Are the sample assets production ready?
 
-You can use them in your projects, but no, they are not production ready.
+Yes, as of 1.1.0, the sample assets are designed to be usable in production projects.
 
 They are:
-- Visual references  
-- Shader usage examples  
-- Demo building blocks  
+- Visual references
+- Shader usage examples
+- Demo building blocks
+- Optimized for real-time use
+- Include LODs for all static meshes
 
-They do not include:
-- LODs  
-- Collisions  
-- Gameplay authoring  
-- Streaming optimizations  
-
-They are intended to demonstrate how to use the system and are optimized enough for the demo scene.
-
+They are not just demo content, but they are also not a full asset pack.
 ---
 
 ## Can I animate or blend styles at runtime?

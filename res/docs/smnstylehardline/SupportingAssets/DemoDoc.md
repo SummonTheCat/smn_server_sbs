@@ -19,6 +19,7 @@ This scene contains a small stylized island environment with:
 - Water, skybox, clouds, and particles  
 - Animated characters and ambient wildlife  
 - A time-of-day driven style and environment system  
+- Style preset swapper.
 
 Everything in the scene is rendered using Hardline shaders and controlled by a single `SSHStyleManager`.
 
@@ -33,13 +34,15 @@ The demo illustrates:
 - How sky, shadows, ambient light, and outlines are synchronized  
 - How gameplay systems interact with Hardline through its API  
 
-The scene blends between four `SSHStyleAsset` presets:
+The day/night cycle blends between four `SSHStyleAsset` presets:
 - Sunrise  
 - Day  
 - Sunset  
 - Night  
 
 These presets are blended and applied through the Hardline API.
+
+There is also a preset swapper mode that demonstrates simple preset swapping.
 
 ---
 
@@ -62,7 +65,13 @@ You will see:
 
 These changes are driven by style preset blending.
 
----
+### Style Preset Swapping
+
+If you click on the triple dot toggle left of the day/night panel, you can switch to a preset swapping mode.
+
+In this mode:
+- The day/night cycle is replaced with next/previous buttons for switching presets.
+- A preset label shows the current preset.
 
 ### Camera
 
@@ -134,6 +143,15 @@ This script serves as a reference for integrating:
 - Time of day systems  
 - Weather systems  
 - Mood or biome transitions  
+
+---
+
+### SSHDemoStyleSwitcher
+
+This component demonstrates simple preset swapping.
+
+- It holds an array of `SSHStyleAsset` presets and an index for the current preset.
+- It applies the current preset to the `SSHStyleManager` when changed.
 
 ---
 
@@ -209,4 +227,4 @@ The demo shows how:
 - Style presets are blended and applied at runtime  
 - Gameplay-style scripts drive visual changes  
 
-`SSHDemoDayNightManager` is the primary reference for applying dynamic style control through the Hardline API.
+`SSHDemoDayNightManager` and `SSHDemoStyleSwitcher` are the primary references for applying dynamic style control through the Hardline API.

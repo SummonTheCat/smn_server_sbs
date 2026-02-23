@@ -218,6 +218,26 @@ Used for:
 
 ---
 
+## GenericEmit
+
+Painted color textured with an emissive map to negate environmental control by Hardline.
+
+```
+Texture_Color
+Texture_Emit
+Color_Base
+Color_Accent
+AccentMask_Strength
+AccentMask_Add
+```
+
+Used for:
+- Neon signs
+- Magical runes
+- Glowing UI meshes
+
+---
+
 ## GenericMapped
 
 Map-driven accent and line placement.
@@ -270,6 +290,49 @@ Used for:
 # Procedural Shaders
 
 These generate detail without textures.
+
+---
+
+## ProcGlassSpec
+
+Stylized glass with hardline lighting.
+
+```
+Color_Specular
+Color_Border
+Color_Surface
+Surface_Intensity
+Border_Weight
+Specular_Push
+Specular_ViewSupress
+Specular_Intensity
+Specular_RimBias
+Specular_BorderClip
+```
+
+---
+
+## ProcGlassStreak
+
+Stylized glass streaks with hardline lighting.
+
+```
+Color_Streaks
+Color_Surface
+Surface_Intensity
+Border_Weight
+Streaks_Intensity
+Streaks_Scale
+Streaks_NegateScale
+Streaks_BaseWidth
+Streaks_PreSoftness
+Streaks_VariationAmount
+Streaks_NoiseScale
+Streaks_CameraOffsetScale
+Streaks_CameraMoveScale
+Streaks_Seed
+```
+
 
 ---
 

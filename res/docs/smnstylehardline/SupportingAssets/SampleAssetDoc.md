@@ -2,9 +2,9 @@
 
 This document describes the **sample asset library** that ships with **Summon Style: Hardline**.
 
-These assets exist to demonstrate how the Hardline style system is intended to be used in real scenes and to provide immediately usable building blocks for prototyping, testing, and example content.
+These assets exist to demonstrate how the Hardline style system is intended to be used in real scenes and to provide immediately usable building blocks for prototyping, testing, or even production use.
 
-They are **not** an asset pack.
+This is the sample asset pack, more asset packs are available separately on the Unity Asset Store.
 
 ---
 
@@ -14,31 +14,15 @@ The Sample Assets included with Hardline are:
 
 - Visual examples of how Hardline materials, shaders, and lighting behave  
 - Ready-made meshes, prefabs, and materials for demo scenes  
-- Reference implementations of best practices for the style system  
+- Reference implementations of best practices for the style system
+- Include LODs for all static meshes.
 
 They are designed to:
 
 - Be visually coherent  
 - Be performant in real-time scenes  
-- Work correctly with all Hardline features  
-
-They are **not designed to be production-ready game assets**.
-
----
-
-## What These Assets Are Not
-
-The Sample Assets:
-
-- Do not include LOD chains  
-- Do not include collision meshes  
-- Are not authored for large open-world streaming  
-- Are not optimized for physics, navigation, or gameplay systems  
-- Are not intended to replace a professional asset pack  
-
-They exist to support the **rendering system**, not to replace environment art.
-
-You are free to use them in your projects, but they should be treated as **Starter content and visual references, not final shipping art.**
+- Work correctly with all Hardline features
+- Work in production.
 
 ---
 
@@ -110,6 +94,14 @@ You are free to use them in your projects, but they should be treated as **Start
 #### Geometry / Terrain
 - GeoTerrainCliff01.mat  
 - GeoTerrainWaterBed01.mat  
+
+#### Geometry / Vehicle
+- GeoVehBodyGlass01.mat
+- GeoVehBodyInner01.mat
+- GeoVehBodyInner02.mat
+- GeoVehBodyInner03.mat
+- GeoVehBodyInner04.mat
+- GeoVehBodyInner05.mat
 
 
 ### Models
@@ -211,6 +203,11 @@ You are free to use them in your projects, but they should be treated as **Start
 - GeoTerrainRockLrg03.fbx  
 - GeoTerrainStairs01.fbx  
 
+#### Geometry / Vehicle
+- GeoVehBodyGlass01.fbx
+- GeoVehBodyInner01.fbx
+- GeoVehBodyScreen01.fbx
+
 
 ### Prefabs
 
@@ -308,6 +305,9 @@ You are free to use them in your projects, but they should be treated as **Start
 - GeoTerrainRockLrg03.prefab  
 - GeoTerrainStairs01.prefab  
 
+#### Geometry / Vehicle
+- GeoVehicle01.prefab
+
 
 ### Textures
 
@@ -328,7 +328,8 @@ You are free to use them in your projects, but they should be treated as **Start
 - FXParticleLeaves01.png  
 
 #### Geometry
-- GeoTent01.png  
+- GeoTent01.png
+- GeoVehScreen01.png
 
 #### Misc
 - UtilBlack.png  
