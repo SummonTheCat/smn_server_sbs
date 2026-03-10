@@ -10,7 +10,6 @@ pub struct SmnRequest {
     pub body: Vec<u8>,
 }
 
-
 impl SmnRequest {
     pub fn from_buffer(buffer: &[u8]) -> Result<Self, &'static str> {
         // Split headers and body
@@ -31,18 +30,21 @@ impl SmnRequest {
         let mut parts = request_line.split_whitespace();
 
         let method = parts.next().ok_or("Missing method")?.to_string();
-        let path = parts.next().ok_or("Missing path")?.to_string();
+        let raw_path = parts.next().ok_or("Missing path")?;
         let version = parts.next().ok_or("Missing version")?.to_string();
+
+        // Strip query string (e.g. ?utm_source=...&fbclid=...)
+        let path = match raw_path.split_once('?') {
+            Some((clean, _query)) => clean.to_string(),
+            None => raw_path.to_string(),
+        };
 
         // Parse headers
         let mut headers = HashMap::new();
 
         for line in lines {
             if let Some((key, value)) = line.split_once(':') {
-                headers.insert(
-                    key.trim().to_string(),
-                    value.trim().to_string(),
-                );
+                headers.insert(key.trim().to_string(), value.trim().to_string());
             }
         }
 
