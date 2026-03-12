@@ -381,7 +381,7 @@ body {
 
 @media (max-width: 900px) {
     .sidebar {
-        width: var(--sidebar-width-narrow);
+        display: none;
     }
 
     .content-inner {
@@ -395,9 +395,7 @@ body {
     }
 
     .sidebar {
-        width: 100%;
-        border-right: none;
-        border-bottom: var(--border-width) solid var(--color-border);
+        display: none;
     }
 
     .content-inner {

@@ -29,8 +29,10 @@
     --font-base: "Nunito", sans-serif;
     --font-accent: "Raleway", sans-serif;
 
-    --font-size-00: 1.2rem;
-    --font-size-01: 1.3rem;
+    --font-size-00: clamp(1rem, 1rem + 0.2vw, 1.15rem);
+    --font-size-01: clamp(1.1rem, 1rem + 0.3vw, 1.35rem);
+    --font-size-02: clamp(1.3rem, 1rem + 0.5vw, 1.75rem);
+    --font-size-03: clamp(2.5rem, 5vw, 4.5rem);
 
     /* precision radius */
     --radius-00: calc(var(--space-01) * 0.15);
@@ -271,6 +273,7 @@ h4 {
     color: var(--color-fg-00);
     font-weight: 700;
     font-family: var(--font-accent);
+    font-size: var(--font-size-02);
 }
 
 p {
@@ -287,6 +290,7 @@ a {
 /* UI links (header + main) */
 .ui-link {
     color: var(--color-link-ui);
+    font-size: var(--font-size-00);
 }
 
 .ui-link:hover {
@@ -324,7 +328,7 @@ a:hover::after {
 
 .text-important {
     /* keep everything you already have */
-    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-size: var(--font-size-03);
     font-weight: 800;
     line-height: 1.05;
     letter-spacing: -0.02em;
@@ -492,14 +496,16 @@ a:hover::after {
 .hero-container {
     position: relative;
     width: 100%;
-    max-width: 960px;   /* or whatever your layout uses */
+    max-width: 960px;
+    /* or whatever your layout uses */
     cursor: pointer;
 }
 
 .hero-ratio {
     position: relative;
     width: 100%;
-    aspect-ratio: 16 / 9;   /* critical */
+    aspect-ratio: 16 / 9;
+    /* critical */
     background: #000;
     overflow: hidden;
 }
@@ -511,7 +517,8 @@ a:hover::after {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: contain;   /* or cover */
+    object-fit: contain;
+    /* or cover */
     border-radius: var(--radius-00);
 }
 
@@ -523,7 +530,7 @@ a:hover::after {
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    background: rgba(0,0,0,0.6);
+    background: rgba(0, 0, 0, 0.6);
     color: white;
     display: flex;
     align-items: center;
@@ -535,7 +542,7 @@ a:hover::after {
 
 .hero-container:hover .hero-play {
     transform: translate(-50%, -50%) scale(1.2);
-    background: rgba(0,0,0,0.8);
+    background: rgba(0, 0, 0, 0.8);
 }
 
 
@@ -564,4 +571,136 @@ a:hover::after {
 
 .flip {
     scale: -1 1;
+}
+
+/* =========================
+   MOBILE LAYOUT
+   ========================= */
+
+@media (max-width: 768px) {
+
+    @media (max-width: 768px) {
+
+        :root {
+            /* layout */
+            --lay-header-height: 64px;
+            --lay-footer-height: 100px;
+            --lay-container-width: 950px;
+
+            /* spacing */
+            --space-00: 5px;
+            --space-01: 20px;
+            --space-03: 6vh;
+
+            /* colors */
+            --color-bg-00: #000000;
+            --color-bg-01: #0b0b0b;
+            --color-bg-02: #111111;
+            --color-bg-03: #171717;
+
+
+            --color-accent-00: #6069ec;
+
+            --color-link-ui: #8b92ff;
+
+
+            --font-size-00: clamp(1rem, 1rem + 0.2vw, 1.15rem);
+            --font-size-01: clamp(1.1rem, 1rem + 0.3vw, 1.35rem);
+
+            /* precision radius */
+            --radius-00: calc(var(--space-01) * 0.15);
+            --radius-01: calc(var(--space-01) * 0.3);
+
+            /* glass */
+            --blur-00: calc(var(--space-01) * 0.2);
+            --blur-01: calc(var(--space-01) * 0.6);
+
+            /* depth */
+            --shadow-00: 0 0 calc(var(--space-01) * 0.3) rgba(0, 0, 0, 0.6);
+            --shadow-01: 0 0 calc(var(--space-01) * 1.6) rgba(0, 0, 0, 0.8);
+
+            /* lines */
+            --line-00: rgba(255, 255, 255, 0.05);
+            --line-01: rgba(255, 255, 255, 0.08);
+        }
+
+    }
+
+    #headerLinks {
+        display: none;
+    }
+
+    .lay-footer {
+        position: relative;
+        padding: var(--space-01);
+    }
+
+    /* footer containers */
+    .lay-footer .lay-row {
+        align-items: flex-start;
+        flex-direction: column;
+        display: block;
+    }
+
+    .lay-container-footer {
+        margin: 0;
+        padding: 0;
+        border-bottom: 1px solid var(--line-00);
+        border-left: none;
+    }
+     
+    .lay-container-footer a {
+        margin: 0;
+        padding: var(--space-00);
+    }
+
+    .lay-container-footer h4 {
+        margin: var(--space-00);
+    }
+
+    .lay-container-footer code {
+        margin: var(--space-00);
+    }
+
+    .lay-footer-buffer {
+        display: none;
+    }
+
+    .lay-split-item-full{
+        display: block;
+        width: 100%;
+    }
+
+    .lay-split-item-sml {
+        display: block;
+        width: 100%;
+    }
+
+    .lay-split-item-mid {
+        display: block;
+        width: 100%;
+    }
+
+    .lay-split-item-lrg {
+        display: block;
+        width: 100%;
+    }
+
+    .img-sym {
+        display: none;
+    }
+
+    .img-display {
+        width: 33%;
+    }
+
+    .lay-split {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: var(--space-01);
+    }
+
+    
+    
 }
